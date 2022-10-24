@@ -1,0 +1,181 @@
+/* Reset Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Variables */
+:root {
+    --main-bg-color: rgb(67, 54, 243);
+    --main-text-color: rgb(255, 255, 255);
+    --main-error-color: rgb(255, 0, 0);
+    --main-link-color: rgb(253, 249, 4);
+    --main-link-hover-color: rgb(245, 104, 16);
+}
+
+/* Main Styles */
+.getWeatherContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.locationInputContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.content {
+    height: 90%;
+    padding: 20px;
+}
+
+.content p {
+    font-size: 2em;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    height: 5%;
+}
+
+.forecastBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerTitleText {
+    padding-right: 20px;
+}
+
+.headerTitleContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.locationInput {
+    font-size: 2em;
+}
+
+.forecastContainer {
+    padding: 100px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    font-size: 1em;
+    color: var(--main-error-color);
+}
+
+.headerLinkContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    height: 5%;
+}
+
+.notFoundContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notFoundText {
+    font-size: 4em;
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutImg {
+    width: 500px;
+}
+
+.mainIcon {
+    width: 20px;
+}
+
+.mainInput {
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 2px solid var(--main-bg-color);
+}
+.mainInput:focus {
+    outline: none;
+    border-bottom: 2px solid var(--main-bg-color);
+}
+
+.mainBtn {
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    border: 3px solid var(--main-bg-color);
+    cursor: pointer;
+    font-size: 2em;
+    padding: 10px;
+    width: 300px;
+}
+
+.mainBtn:hover {
+    color: var(--main-bg-color);
+    background-color: var(--main-text-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.error {
+    color: var(--main-error-color);
+}
+
+/* Default el styles */
+a {
+    text-decoration: none;
+}
+
+a:visited,
+a:link {
+    color: var(--main-link-color);
+}
+
+a:hover {
+    color: var(--main-link-hover-color);
+}
