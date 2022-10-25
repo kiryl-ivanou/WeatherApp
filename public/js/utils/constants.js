@@ -16,6 +16,10 @@ const FORECAST_CONSTANTS = {
         TITLE: "Feels Like Temperature",
         ICON: "feels-like-temperature-icon",
     },
+    HUMIDITY: {
+        TITLE: "Humidity",
+        ICON: "humidity-icon",
+    },
     FORECAST_DESCRIPTION: {
         TITLE: "Forecast",
         ICON: "forecast-icon",

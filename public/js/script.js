@@ -63,7 +63,14 @@ function fetchWeatherData(location) {
  * @param {string || undefined} weatherData.error - In case of error, contains it's text.
  * @public
  */
-function createForecast({ location, feelslike, temperature, forecast, error }) {
+function createForecast({
+    location,
+    feelslike,
+    temperature,
+    forecast,
+    humidity,
+    error,
+}) {
     const weatherForecast = new Forecast(getElementById("forecast_container"));
 
     weatherForecast.clearForecast();
@@ -91,6 +98,11 @@ function createForecast({ location, feelslike, temperature, forecast, error }) {
         forecastConstants.FEELS_LIKE_TEMPERATURE.TITLE,
         forecastConstants.FEELS_LIKE_TEMPERATURE.ICON,
         feelslike
+    );
+    weatherForecast.generateForecastBlock(
+        forecastConstants.HUMIDITY.TITLE,
+        forecastConstants.HUMIDITY.ICON,
+        humidity
     );
     weatherForecast.generateForecastBlock(
         forecastConstants.FORECAST_DESCRIPTION.TITLE,

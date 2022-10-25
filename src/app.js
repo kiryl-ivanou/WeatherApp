@@ -69,6 +69,7 @@ app.get("/weather", (req, res) => {
                     temperature,
                     feelslike,
                     weather_descriptions,
+                    humidity,
                     error = null,
                 }) => {
                     if (error) {
@@ -82,6 +83,7 @@ app.get("/weather", (req, res) => {
                         feelslike,
                         temperature,
                         forecast: weather_descriptions[0],
+                        humidity,
                     });
                 }
             );
