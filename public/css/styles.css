@@ -123,6 +123,7 @@
 
 .aboutImg {
     width: 500px;
+    margin-bottom: 30px;
 }
 
 .mainIcon {
@@ -174,6 +175,7 @@ a {
 a:visited,
 a:link {
     color: var(--main-link-color);
+    background-color: var(--main-bg-color);
 }
 
 a:hover {
