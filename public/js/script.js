@@ -47,8 +47,8 @@ async function onGetWeatherBtnClick(e) {
  * @returns {Promise<object>} - Parsed weather data
  */
 function fetchWeatherData(location) {
-    return fetch(`http://localhost:3080/weather?address=${location}`).then(
-        (response) => response.json()
+    return fetch(`/weather?address=${location}`).then((response) =>
+        response.json()
     );
 }
 
