@@ -1,5 +1,34 @@
-import { FORECAST_CONSTANTS as forecastConstants } from "./utils/constants.js";
-import Forecast from "./utils/Forecast.js";
+/**
+ *  Stores all constants needed for forecast generation
+ *  @constant
+ *  @type {object}
+ */
+const forecastConstants = {
+    LOCATION: {
+        TITLE: "Location",
+        ICON: "location-icon",
+    },
+    TEMPERATURE: {
+        TITLE: "Temperature",
+        ICON: "temperature-icon",
+    },
+    FEELS_LIKE_TEMPERATURE: {
+        TITLE: "Feels Like Temperature",
+        ICON: "feels-like-temperature-icon",
+    },
+    HUMIDITY: {
+        TITLE: "Humidity",
+        ICON: "humidity-icon",
+    },
+    FORECAST_DESCRIPTION: {
+        TITLE: "Forecast",
+        ICON: "forecast-icon",
+    },
+    FORECAST_ERROR: {
+        TITLE: "Error Occurred",
+        ICON: "error-icon",
+    },
+};
 
 /**
  * Listen to click event
@@ -63,7 +92,7 @@ function fetchWeatherData(location) {
  * @param {string || undefined} weatherData.error - In case of error, contains it's text.
  * @public
  */
-function createForecast({
+async function createForecast({
     location,
     feelslike,
     temperature,
@@ -71,7 +100,10 @@ function createForecast({
     humidity,
     error,
 }) {
-    const weatherForecast = new Forecast(getElementById("forecast_container"));
+    const ForecastModule = await import("./utils/Forecast.js");
+    const weatherForecast = new ForecastModule.default(
+        getElementById("forecast_container")
+    );
 
     weatherForecast.clearForecast();
     if (error) {
