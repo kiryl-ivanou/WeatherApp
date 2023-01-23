@@ -10,5 +10,5 @@ Simple NodeJS application for getting weather forecast for desired location
     > `Weather app listening on port 3080`
 -   navigate to http://localhost:3080/
 
-# Application is hosted on Heroku
-Link: [Weather App](https://wetherk-weather-application.herokuapp.com/)
+# Application is hosted on [Vercel](https://vercel.com/)
+Link: [Weather App](https://weather-app-nine-inky.vercel.app/)
